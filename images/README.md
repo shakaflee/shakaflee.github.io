@@ -1,4 +1,4 @@
-** This shows how to create a foler on github.**
+**This shows how to create a foler on github.**
 
 1. click `Add file`.
 2. name your folder ends with a `/`.
