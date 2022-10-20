@@ -8,67 +8,172 @@ edit here will show on my webpage 2022-10-13 01:37
 ### 1. heading
 use one to six `#` before text, the more `#` you use, the small size your heading.
 
+**Code Sample**:
+
+```
+# heading 1
+## heading 2
+### heading 3
+```
+
+**will produce:**
+
+# heading 1
+## heading 2
+### heading 3
+
 **on github, two or more heading you use, github will automatically generate a table of content which help you navagate quickly.**
 
 ### 2. styling text
 to indicate emphasis, use 
+
+**Code Sample**:
+
+```
 - **bold**
 - *Italic* or _Italic_
 - ~~strickthrough~~
-- normal<sub>subscript</sub>
-- normal<sup>supperscript</sup>,
+- normal <sub>subscript</sub>
+- normal <sup>supperscript</sup>,
+- ***all bold and italic***
+- **bold and nested _italic_**
+```
+
+**will produce:**
+
+- **bold**
+- *Italic* or _Italic_
+- ~~strickthrough~~
+- normal <sub>subscript</sub>
+- normal <sup>supperscript</sup>,
 - ***all bold and italic***
 - **bold and nested _italic_**
 
 ### 3. quoting text
 use symbol `>` before your text
+
+**Code Sample**:
+
+```
+>this is quote
+```
+
+**will produce:**
  
 >this is quote
 
 ### 4. quoting code
-use single backkicks to call out,like: this is a `code` sentence.
+use single backkicks to call out,like: 
+
+**Code Sample**:
+
+```
+this is a `code` sentence.
+```
+
+**will produce:**
+
+this is a `code` sentence.
 
 use triple backkicks to format text into a distince block, like:
+
+**Code Sample**:
+
+````
 ```
 this is a code sentence.
 ```
-**Note**: text in quote will not change,**Note** this.
+````
+
+**will produce:**
+
+```
+this is a code sentence.
+```
+
+**Note 1**: text in quote will not change.
+
+**Note 2**: to show  `` ``` `` above,I use 4 `` ` `` outer here. which I found at [Creating and highlighting code blocks.](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)
+
+**Note 3**: to show `` ``` `` or `` ` `` in Note 2, fist enter 2 `` ` `` followed with **a space** , then enter 3 or 1 `` ` `` followed with **a space**, end with 2 `` ` ``.
 
 ### 5. supported color mode (only in issue,pull request and discussion)
 use single backkicks to quote color to display the color.
 
-like this `rgb(25,26,145)`
+**Code Sample**:
 
-Fail to show here because like I mentioned above, this is only for issue,pull request and discussion.
+```
+like this `rgb(25,26,145)`
+```
+
+**will produce:**
+
+
+`rgb(25,26,145)`
+
+
+**Fail** to show here because like I mentioned above, this is only for issue,pull request and discussion.
 
 ### 6. Links
 create a an inline link by wrapping link text in `[]`,and then use `()` wrapping the URL.
 
-This is link to [Github basic writing and formatting pages]([https://github.com](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax))
+**Code Sample**:
+
+```
+This is link to [Github basic writing and formatting pages](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+```
+
+**will produce:**
+
+This is link to [Github basic writing and formatting pages](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ### 7. section links
-juse hovering over on a section heading to expose the link.
+As github will use heading to auto build a table, you can just link directly to section by click the table list item, and also by hovering over on a section heading to expose the link.
 
 ### 8. relative link(in github)
+
+**Code Sample**:
+
 ```
 this link to [404.md](404.md)
 ```
-which will look like this:
+
+**will produce:**
 
 this link to [404.md](404.md)
+
+**Note 1**: this file is in root dir which is same as this README.md location, if they are not, use `/` or `.` or type dir name to indicate.
 
 ### 9. Images
-use a `!` to indicate here is a image, and use `[]` to wrap alt text, use `()`to link the image source.
+use a `!` to indicate here is an image, and use `[]` to wrap alt text, use `()`to link the image source.
+
+
+**Code Sample**:
 
 ```
 ![cute cat](images/cute-cat.png)
 ```
+
+**will produce:**
+
 ![cute cat](images/cute-cat.png)
 
-**Note**: no space between file name, which I learned from this png file name.
+**Note**: no space between file name, which I learned from this png file name, note there I use a `-` to link.
 
 ### 10. specifying a theme an image is shown on
 use a HTML `<picture>` element and `prefers-color-scheme`.
+
+**Code Sample**:
+
+```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
+```
+
+**will produce:**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
@@ -82,25 +187,36 @@ use `*` or `-` for **unordered list**.
 use number for **ordered list**.
 
 ### 12. nested list(use `Tab` for indent and `Shift + Tab` for dedent)
+
+**Code Sample**:
+
 ```
 1. this is first 
    - second
    - third
      - fouth
 ```
+
+**will produce:**
+
 1. this is first 
    - second
    - third
      - fouth
   
 ### 13. task list
- preface a hyphen `-` and space followd by `[ ]`,to mark a task as complete use `[x]`.
+preface a hyphen `-` and space followd by `[ ]`,to mark a task as completed use `[x]`.
+ 
+**Code Sample**:
  
  ```
  - [x] this is done.
  - [ ] this is **not** done.
  - [ ] \(use `\` when begin with parenthesis `\`)
  ```
+ 
+**will produce:**
+ 
  - [x] this is done.
  - [ ] this is **not** done.\
  - [ ] \(use `\` when begin with parenthesis `\`)
@@ -116,9 +232,14 @@ use number for **ordered list**.
 ### 18. use emoji
 use with `:` followed by emojicode,and use `Tab` or `Enter` to complete.
 
+**Code Sample**:
+ 
 ```
 this is :+1
-```
+``` 
+
+**will produce:**
+ 
 this is 👍
 
 ### 19. paragraphs
@@ -127,38 +248,57 @@ create a new para by leaving a blank line between lines of text.
 ### 20. footnote
 **note**:foot note will always show at the bottome of markdown so no need worry about where you put footnoot.
 
+**Code Sample**:
+
 ```
 here is footnote[^1].
 
 here is another footnote[^2].
 
-[^1]:my ref(**note** with 2 space after `]`).
-[^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.  
+[^1]:my ref(**note** with 2 space after `].`).  
+[^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.    
 This allows you to have a footnote with multiple lines, **note** this line end with two space after `.` too.  
 third line.
 ```
+
+**will produce:**
+
 here is footnote[^1].
 
 here is another footnote[^2].
 
-
 [^1]:my ref(**note** with 2 space after `]`).
-[^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.  
+[^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.    
 This allows you to have a footnote with multiple lines, **note** this line end with two space after `.` too.  
 third line.
 
 ### 21. hiding content with comment
 use HTML comment
+
+**Code Sample**:
+
 ```
 <!-- this content will not appear in the rendered markdown -->
 ```
+
+**will produce:**
+
 <!-- this content will not appear in the rendered markdown -->
 
+of course **Nothing**, but actually I do put the code here.
+
 ### 22. ignore markdown formatting(use `\`)
+
+**Code Sample**:
+
 ```
 let's rename \*old name\* to \*new name\*
 ```
+**will produce:**
+
 let's rename \*old name\* to \*new name\*
+
+More info about this can [click here.](https://daringfireball.net/projects/markdown/syntax#backslash)
 
 ### 23. disable markdown rendering when you view a markdown file by clicing `<>` at the top of the file, so you can view source.
 
