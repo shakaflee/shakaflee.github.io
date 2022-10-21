@@ -255,7 +255,7 @@ here is footnote[^1].
 
 here is another footnote[^2].
 
-[^1]:my ref(**note** with 2 space after `].`).  
+[^1]:my ref,**note** with 2 space after `.`.  
 [^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.    
 This allows you to have a footnote with multiple lines, **note** this line end with two space after `.` too.  
 third line.
@@ -267,7 +267,7 @@ here is footnote[^1].
 
 here is another footnote[^2].
 
-[^1]:my ref(**note** with 2 space after `]`).
+[^1]:my ref,**note** with 2 space after `.`.  
 [^2]:Every new line should be prefixed with 2 spaces,so **note** this line end with two space after `.`.    
 This allows you to have a footnote with multiple lines, **note** this line end with two space after `.` too.  
 third line.
@@ -302,6 +302,191 @@ More info about this can [click here.](https://daringfireball.net/projects/markd
 
 ### 23. disable markdown rendering when you view a markdown file by clicing `<>` at the top of the file, so you can view source.
 
-## end this learning here.
+## end this learning jourey here.
 
 
+## Learning: Advanced formatting on github 
+2022-10-21 11:10:00
+
+### 1. create a table
+use pipe `|`, hyphens `-`, colons `:`
+
+- `|` for seperate column;
+- `-` for create table header;
+- `:` for aligh text for that column;
+
+**Code Sample**:
+
+```
+| header 1|header 2|header 3|
+|:---|:---:|---:|
+|cell 1,this will **align left**|cell 2,**align center**|cell3,**align right**|
+|cell 4,no worry about each cell txet length|cell 5|cell 6|
+```
+**will produce:**
+
+| header 1|header 2|header 3|
+|:---|:---:|---:|
+|cell 1,this will **align left**|cell 2,**align center**|cell3,**align right**|
+|cell 4,no worry about each cell text length|cell 5|cell 6|
+
+**Note 1**: you can format text in table too, there at least 3 `-` to create a header.
+
+### 2. create a collapsed section
+this will only show content when user click to see.
+
+use `<details>` block,
+
+**Code Sample**:
+
+````
+<details><summary>click to show more</summary>
+
+#### this will hide.
+```
+show quote code here.
+```
+</details>
+````
+
+**will produce:**
+
+<details><summary>click to show more</summary>
+
+#### this will hide.
+```
+show quote code here.
+```
+</details>
+
+**note 1**: if there is no `<summary>` tag then `click to show more` will be content, not the title.
+
+### 3. create code block
+as mentioned in **basic writing and formatting on gihub - quote code**,use 3 `-` to fence.
+
+and add a language for Syntax highlighting.
+
+**Code Sample**:
+
+````
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+````
+
+**will produce:**
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+github will detect the language.
+
+### 4. create diagram
+add word inside fenced block to identify.
+
+**Code Sample**:
+
+````
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+````
+
+**will produce:**
+
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+here use keyword `mermaid` to identify.
+
+### 5. writing mathematical expression
+use `$` delimit expression.
+
+**Code Sample**:
+
+```
+this is math $\sqrt{3}$
+```
+
+**will produce:**
+
+this is math $\sqrt{3}$
+
+also use `math` inside fenced block to identify this is a math expression to avoid use `$`,or you can use `$$`.
+
+**Code Sample**:
+
+````
+```math
+\sqrt{3}
+```
+or
+
+$$\sqrt{3}$$
+````
+
+**will produce:**
+
+```math
+\sqrt{3}
+```
+or
+
+$$\sqrt{3}$$
+
+well here comes out an error when use `` ```math `` and I don't konw why,so maybe just use `$$` now.
+
+when use `$` outside of a math expression ,use `<span>$</span>`.
+
+**Code Sample**:
+
+```
+here is <span>$</span>100 , and here is $\sqrt{3}$
+```
+
+**will produce:**
+
+here is <span>$</span>100 , and here is $\sqrt{3}$
+
+### 6. auto linked reference
+
+**Code Sample**:
+
+```
+visit https://github.com
+```
+
+**will produce:**
+
+visit https://github.com
+
+and for ref to issue,pull request etc. use `#`
+
+### 7. attaching file
+
+### 8. links to code
+for a permanent link to code, [click to see the way](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet)
+
+for link to a markdown file with no render,use `?plain=1` at the end of the url,and with `#L` you can link to a certain line.
+
+### 9. use keyword in issue and pull request.
+use `close` or `fix` or `reslove` or `duplicate of`
+
+## end this learning journey here.
