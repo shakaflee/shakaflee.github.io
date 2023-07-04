@@ -1,0 +1,13 @@
+<nav>
+    
+    <!-- 添加一个logo -->
+    <a href="/" class="logo-link">
+      <img src="/assets/images/logo.png" alt="Logo" class="logo-img">
+    </a>
+
+    <!-- 添加导航栏的各个页面 -->
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}">{{ item.name }}</a>
+    {% endfor %}   
+    
+</nav>
