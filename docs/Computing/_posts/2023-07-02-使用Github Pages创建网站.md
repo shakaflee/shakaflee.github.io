@@ -194,7 +194,7 @@ source 'https://rubygems.org'
 gem 'github-pages'
 ```
 
-这是因为国内访问rubygems.org这个网站很慢，所以我们使用中国的镜像站。
+这是因为国内访问rubygems.org这个网站很慢，所以我们使用中国的镜像站，但是你按照这两种去做，在线的版本应该都可以，只是说第一个是本地，在线都行。
 
 至此，我们的网站配置相关的信息就编辑结束了，理论上这个几个文件的内容不会再做频繁变更了。
 
@@ -654,7 +654,33 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 填写summary后，选择右侧蓝色的发布（publish），这样我们的内容就都同步到Github网站上去了。
 
-![publish branch](/assets/images/github-pages/035.png)
+![publish branch](/assets/images/github-pages/036.png)
 
+然后我们就可以打开浏览器到github看看效果了。
 
+![github website](/assets/images/github-pages/037.png)
+
+可以看到我们本地的所有文件都已经同步过去了，现在我们进行在线设置，让这个分支成为我们的在线网站内容来源。
+
+点击图里的Settings这个选项，然后选择左侧的Pages选项，
+
+![settings pages](/assets/images/github-pages/038.png)
+
+在Build and deployment下可以看到问我们内容来源，默认的是Deploy from a branch,我们就是这样的，所以不用改。
+
+在branch下，我们因为就一个gh-pages分支，所以也是默认，文件夹选择我们/docs，这时我们自己创建的，然后点击save就可以了。
+
+![branch deploy](/assets/images/github-pages/039.png)
+
+刷新这个页面，可以看到已经可以访问了，点击visit site就可以看看在线效果了，有时候需要几分钟才能刷新出来内容，所以如果看不到就稍微等一下：
+
+![ready to visit](/assets/images/github-pages/040.png)
+
+最终的在线效果如图：
+
+![view on github](/assets/images/github-pages/041.png)
+
+以后要做的事情就是更新文章就行了，可以在线直接编辑，也可以本地编辑好后，用同样的方法同步到github就可以了，Github会自动同步你的内容到你的网站。
+
+Have fun.
 
