@@ -644,9 +644,17 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 我们预览网站没有问题后，就可以发布内容到Github Pages去了。
 
-打开Github Desktop，如图：
+打开Github Desktop，我们在summary出填写此次的信息，比如我这里就写：第一次提交docs/下全部文件，然后点击下方蓝色的commit to main.
 
-![github status 01](/assets/images/github-pages/034.png)
+![commit to main](/assets/images/github-pages/034.png)
+
+在弹出来的对话框里，我们选择新建一个分支，名字为gh-pages,这样我们以后就用这个分支来作为我们的网站内容来源.
+
+![create gh-pages branch](/assets/images/github-pages/035.png)
+
+填写summary后，选择右侧蓝色的发布（publish），这样我们的内容就都同步到Github网站上去了。
+
+![publish branch](/assets/images/github-pages/035.png)
 
 
 
