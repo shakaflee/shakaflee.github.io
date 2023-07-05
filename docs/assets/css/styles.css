@@ -341,6 +341,7 @@ blockquote {
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777; 
+  margin: 10px 0;
 }
 
 blockquote > :first-child {
@@ -349,6 +350,10 @@ blockquote > :first-child {
   
 blockquote > :last-child {
   margin-bottom: 0; 
+}
+
+p {
+  word-break: break-all;
 }
 
 /**

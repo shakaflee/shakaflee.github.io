@@ -7,7 +7,7 @@ date: 2023-07-02 09:00:00 +0800
 
 ## 基础知识
 
-本文假设你对版本控制、Git和GitHub知之甚少。如果你了解HTML和CSS的基础知识会很有帮助，因为我们将直接使用这些语言。我们还会使用一点Markdown，但你不需要一定会这些东西，因为我们会一步步讲解。文中用到的代码都可以直接复制，也可以直接[fork this repo]()。
+本文假设你对版本控制、Git和GitHub知之甚少。如果你了解HTML和CSS的基础知识会很有帮助，因为我们将直接使用这些语言。我们还会使用一点Markdown，但你不需要一定会这些东西，因为我们会一步步讲解。文中用到的代码都可以直接复制，也可以直接[Fork this repo](https://github.com/shakaflee/shakaflee.github.io)。
 
 ### Git, Github, Github Pages 是什么
 
@@ -19,7 +19,7 @@ Git是一个追踪任何时候文件变动情况的版本控制工具，举个�
 
 所以，我们可以理解为Git就是一个可以让我们执行**回退**动作的软件。
 
-Git本身是一个命令行工具，需要对应的一些知识，但我们这里用它的桌面图形应用--[GitHub Desktop](https://desktop.github.com/)，根据自己的电脑系统进行选择，安装后完成登录，就可以使用了。需要注意的是它是全英文的，不过本身我们要用到的功能就很简单，后边我会进行演示。你也可以使用Homebrew进行安装，具体方法可参考[国内安装和使用Homebrew]()。
+Git本身是一个命令行工具，需要对应的一些知识，但我们这里用它的桌面图形应用--[GitHub Desktop](https://desktop.github.com/)，根据自己的电脑系统进行选择，安装后完成登录，就可以使用了。需要注意的是它是全英文的，不过本身我们要用到的功能就很简单，后边我会进行演示。你也可以使用Homebrew进行安装，具体方法可参考[国内安装和使用Homebrew](/computing/2023/07/01/国内安装和使用Homebrew.html)。
 
 ### Github
 
@@ -71,7 +71,7 @@ HTML (HyperText Markup Language) ：一种浏览器可以识别的标记语言�
 
 ### step 02: 安装并配置 Visual Studio Code
 
-visual-studio-code是一个代码编辑器（文档写作），集成了非常丰富的功能，我们可以到[官网下载安装](https://code.visualstudio.com/),也可使用Homebrew进行安装，具体可以参考这篇文章[国内安装和使用Homebrew]()。
+visual-studio-code是一个代码编辑器（文档写作），集成了非常丰富的功能，我们可以到[官网下载安装](https://code.visualstudio.com/),也可使用Homebrew进行安装。
 
 我这里使用第二种方法进行安装，但你完全可以使用第一种方法到官网下载安装。
 
@@ -644,15 +644,15 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 我们预览网站没有问题后，就可以发布内容到Github Pages去了。
 
-打开Github Desktop，我们在summary出填写此次的信息，比如我这里就写：第一次提交docs/下全部文件，然后点击下方蓝色的commit to main.
+打开Github Desktop，我们在Summary处填写此次的信息，比如我这里就写：第一次提交docs/下全部文件，然后点击下方蓝色的commit to main.
 
 ![commit to main](/assets/images/github-pages/034.png)
 
-在弹出来的对话框里，我们选择新建一个分支，名字为gh-pages,这样我们以后就用这个分支来作为我们的网站内容来源.
+在弹出来的对话框里，我们选择新建一个分支，名字为gh-pages,这样我们以后就用这个分支来作为我们的网站内容来源，点击蓝色的Create New Branch.
 
 ![create gh-pages branch](/assets/images/github-pages/035.png)
 
-填写summary后，选择右侧蓝色的发布（publish），这样我们的内容就都同步到Github网站上去了。
+填写Summary后，选择右侧蓝色的发布（Publish branch），这样我们的内容就都同步到Github网站上去了。
 
 ![publish branch](/assets/images/github-pages/036.png)
 
@@ -668,7 +668,7 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 在Build and deployment下可以看到问我们内容来源，默认的是Deploy from a branch,我们就是这样的，所以不用改。
 
-在branch下，我们因为就一个gh-pages分支，所以也是默认，文件夹选择我们/docs，这时我们自己创建的，然后点击save就可以了。
+在branch下，我们因为就一个gh-pages分支，所以也是默认，文件夹选择我们/docs，这是我们自己创建的，然后点击save就可以了。
 
 ![branch deploy](/assets/images/github-pages/039.png)
 
