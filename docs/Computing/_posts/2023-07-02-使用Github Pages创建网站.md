@@ -644,7 +644,75 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 我们预览网站没有问题后，就可以发布内容到Github Pages去了。
 
-打开Github Desktop，我们在Summary处填写此次的信息，比如我这里就写：第一次提交docs/下全部文件，然后点击下方蓝色的commit to main.
+13.1 创建Github Actions
+
+我们通过Github Actions可以实现每当有内容推送到这个仓库的时候，网站的内容自动更新为最新内容，要做到这一步，我们可以创建一个文件，来描述工作流(workflow)。
+
+在本地的username.github.io，我这里就是shakaflee.github.io这个文件夹下创建一个文件夹，名字是".github",再在其下创建一个子文件夹，名字是"workflows",在该文件夹创建一个名为"push-to-publish.yml"的文件，文件内容为：
+
+{% include copycode.html %}
+```yml
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["gh-pages"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+```
+
+截图示例：
+
+![create push-to-publish](/assets/images/github-pages/042.png)
+
+上边这个文件的内容可以实现的效果就是：每当我们把内容更新到github网页上的这个仓库的时候，就会触发自动更新网站内容这样一个行为，所以我们以后就可以只专注于创作，不用关心别的发布之类的事情了。
+
+打开Github Desktop，我们在Summary处填写此次的信息，比如我这里就写：第一次提交docs/下全部文件[更正下：应该是提交shakaflee的全部文件，因为不仅有docs这个文件夹，还有.github这个文件夹]，然后点击下方蓝色的commit to main.
 
 ![commit to main](/assets/images/github-pages/034.png)
 
@@ -666,15 +734,9 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 ![settings pages](/assets/images/github-pages/038.png)
 
-在Build and deployment下可以看到问我们内容来源，默认的是Deploy from a branch,我们就是这样的，所以不用改。
-
-在branch下，我们因为就一个gh-pages分支，所以也是默认，文件夹选择我们/docs，这是我们自己创建的，然后点击save就可以了。
-
-我们选择使用Github Actions.
+在Build and deployment下可以看到问我们内容来源，默认的是Deploy from a branch,我们选择使用Github Actions.
 
 ![source is github actions](/assets/images/github-pages/043.png)
-
-![branch deploy](/assets/images/github-pages/039.png)
 
 刷新这个页面，可以看到已经可以访问了，点击visit site就可以看看在线效果了，有时候需要几分钟才能刷新出来内容，所以如果看不到就稍微等一下：
 
