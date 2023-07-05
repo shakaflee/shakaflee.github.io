@@ -670,6 +670,10 @@ Jekyll会以post里边的front matter为准，比如说我有篇文章在/Comput
 
 在branch下，我们因为就一个gh-pages分支，所以也是默认，文件夹选择我们/docs，这是我们自己创建的，然后点击save就可以了。
 
+我们选择使用Github Actions.
+
+![source is github actions](/assets/images/github-pages/043.png)
+
 ![branch deploy](/assets/images/github-pages/039.png)
 
 刷新这个页面，可以看到已经可以访问了，点击visit site就可以看看在线效果了，有时候需要几分钟才能刷新出来内容，所以如果看不到就稍微等一下：
