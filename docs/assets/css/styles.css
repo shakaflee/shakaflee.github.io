@@ -358,7 +358,7 @@ blockquote > :last-child {
   margin-bottom: 0; 
 }
 
-p {
+p,li {
   word-break: break-all;
 }
 
