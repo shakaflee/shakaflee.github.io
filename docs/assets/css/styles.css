@@ -118,6 +118,7 @@ a.nav-item:hover {
 
 main {
   margin-top: 62px;
+  width: 100%;
 }
 
 .index-h2 {
@@ -556,7 +557,12 @@ p,li {
   .highlight .il {
     color: #099; } */
 
+main #app {
 
+  display: flex; 
+  justify-content: center;
+  background-color:#c3fe8b
+}
 
 
 
