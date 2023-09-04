@@ -1,0 +1,24 @@
+{% for post in posts %}
+<div class="page-post-item">
+  <!-- post item image area -->
+  <div class="page-post-item-image">
+    <a href="{{ post.url }}">
+      <img class="page-post-item-image" src="{{ post.cover }}">
+    </a>
+  </div>
+  <!-- post item heading area -->
+  <div class="page-post-item-text">
+    <a href="{{ post.url }}">
+      <h3 class="page-post-item-heading">{{ post.title }}</h3>
+    </a>
+    <!-- post item excerpt area -->
+    <div class="post-excerpt">
+      {% if post.excerpt.size > 15 %}
+        <p>{{ post.excerpt | slice: 0, 15 }}...</p>
+      {% else %}
+        <p>{{ post.excerpt }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}

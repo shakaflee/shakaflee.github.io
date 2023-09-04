@@ -1,25 +1,30 @@
 <!doctype html>
-<html>
+<html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <title>shakaflee | {{ page.title }}</title>
+    <title>{{site.title}} | {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}" />
+    <meta name="description" content="{{ page.description }}" />
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
   </head>
   <body>
     <header>
-      <!-- to add content-->
+      <a href="/" class="logo-link">
+        <img src="/assets/images/logo.png" alt="Logo" class="logo-img">
+      </a>
     </header>
 
     {% include navigation.html %}
 
     <main>
 
-      {{ content }}
 
+      {{ content }}
+      
+      {% include sidebar.html %}
+      
     </main>
 
     <footer>

@@ -1,8 +1,4 @@
 <nav>
-  <a href="/" class="logo-link">
-    <img src="/assets/images/logo.png" alt="Logo" class="logo-img">
-  </a>
-
   <div class="nav-items">
     {% for item in site.data.navigation %}
       <a href="{{ item.link }}" class="nav-item">{{ item.name }}</a>
