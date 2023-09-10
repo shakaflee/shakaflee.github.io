@@ -66,27 +66,39 @@ h1, h2, h3, h4, h5, h6, ul, ol, li {
   margin: 10px 0;
 }
 
+
 header {
-  padding: 10px;
-}
-
-.logo-img {
   display: flex;
-  justify-content: flex-start;
-  height: 40px;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
+  justify-content:space-between;
+  align-items:center;
+  padding: 5px;
   border-bottom: #f46363 solid 3px;
 }
 
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+}
 
-a.nav-item {
-  margin-right: 30px;
+.logo-link {
+  display: flex; 
+  align-items: center;
+}
+
+.logo-img {
+  margin-right: 5px;
+  height: 40px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: var(--primary-font-size);
+}
+
+.slogan {
+  font-size: var(--fifth-font-size);
+  font-weight: bold;
 }
 
 
