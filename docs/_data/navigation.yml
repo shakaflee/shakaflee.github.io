@@ -1,6 +1,3 @@
 - name: 首页
   link: /
-- name: 炒股
-  link: /tags/share/index.html
-- name: 图片
-  link: /tags/pic/index.html
+

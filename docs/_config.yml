@@ -1,15 +1,19 @@
-title: montage # 网站的标题，自己改
+title: mofunaigc # 网站的标题，自己改
 description: >- # 网站的描述内容，自己改下边的内容，注意这里开头是有空格的，不能忽略。
-  learn, live, fun.
+  免费分享新奇好玩的AIGC相关的资讯。
 markdown: kramdown # 网站使用的markdown解析器
 paginate: 10
 paginate_path: "page:num"
-tag_dir: "tags"
 author: shaka
 
 plugins:
-  - tag_pagination
   - jekyll-paginate
 
+defaults:
+  - 
+    scope:
+      path: "content/_posts"
+    values:
+      layout: "post"
 
 

@@ -1,6 +1,4 @@
 {% if paginator.total_pages > 1 %}
-{% assign pname = page.pname %}
-<!-- pname就是我之前插件中加入的那个用来表明所属页面属性的, 顺带也故意写成了方便添加url的路径格式, 且下面这些路径还需要根据具体情况自行调整~ -->
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: pname | prepend: "/" | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>

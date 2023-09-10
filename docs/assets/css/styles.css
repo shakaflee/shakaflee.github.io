@@ -73,7 +73,7 @@ header {
 .logo-img {
   display: flex;
   justify-content: flex-start;
-  height: 50px;
+  height: 40px;
 }
 
 nav {
@@ -81,8 +81,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  border-top: #f46363 solid 3px;
-  border-bottom: #dddddd solid 2px;
+  border-bottom: #f46363 solid 3px;
 }
 
 
