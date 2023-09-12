@@ -248,6 +248,7 @@ article {
 article img {
   margin: 10px auto;
   display: block;
+  max-width: 100%;
 }
 
 /* value code attribute */
