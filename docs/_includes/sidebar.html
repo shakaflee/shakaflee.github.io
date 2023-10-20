@@ -1,28 +1,7 @@
-<aside class="sidebar">
-
-  <!-- sdiebar-01, to add content -->
-  <div class="sidebar-content">
-    {% include sidebar-content-01.html %}
-  </div>
-
-  <!-- sdiebar-02, to add content -->
-  <div class="sidebar-content">
-    {% include sidebar-content-02.html %}
-  </div>
-
-  <!-- sdiebar-03, to add content -->
-  <div class="sidebar-content">
-    {% include sidebar-content-03.html %}
-  </div>
-
-  <!-- sdiebar-04, to add content -->
-  <div class="sidebar-content">
-    {% include sidebar-content-04.html %}
-  </div> 
-
-  <!-- sdiebar-05, to add content -->
-  <div class="sidebar-content">
-    {% include sidebar-content-05.html %}
-  </div> 
-
-</aside>
+{% if page.toc %}
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      {% include toc.html html=content %}
+    </div>
+  </aside>
+{% endif %}

@@ -1,3 +1,6 @@
-- name: 首页
-  link: /
-
+- name: Computing
+  link: /Computing.html
+- name: Finance
+  link: /Finance.html
+- name: Rabit
+  link: /rabit.html

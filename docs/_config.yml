@@ -1,19 +1,32 @@
-title: Aimlobo # 网站的标题，自己改
+title: shakaflee # 网站的标题，自己改
 description: >- # 网站的描述内容，自己改下边的内容，注意这里开头是有空格的，不能忽略。
-  免费分享新奇好玩的AIGC相关的资讯。
+  learn, live, fun.
 markdown: kramdown # 网站使用的markdown解析器
-paginate: 10
-paginate_path: "page:num"
-author: shaka
 
-plugins:
-  - jekyll-paginate
+
+
+# 这里是一些自定义设置
+# 我这样设置是因为我要给属于这两个页面下的posts添加一个图标，
+# 在这里设置后就不用在每个posts里再单独进行设置，
+# 还记得我对程序的理解里的最后一条原则吗：复用。
+# 另外有个laytou:"post"，这个是说只要在这个文件路径下的文档，都属于post这个样式；
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      toc: true
   - 
     scope:
-      path: "content/_posts"
+      path: "Computing/_posts"
     values:
+      icon-img: "/assets/images/icon-computing.webp"
       layout: "post"
-
-
+  - 
+    scope:
+      path: "Finance/_posts"
+    values:
+      icon-img: "/assets/images/icon-finance.webp"
+      layout: "post"

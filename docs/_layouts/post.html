@@ -3,11 +3,10 @@ layout: default
 ---
 
 <div class="post-content">
+    {% include sidebar.html %}
     <article>
-        {{ site.author }} @ {{ page.date | date: "%B %d, %Y" }}
         {{ content }}
     </article>
-
-    {% include relatedpost.html %}
 </div>
 
+<script src="/assets/scripts/copycode.js"></script>

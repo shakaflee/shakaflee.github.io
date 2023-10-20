@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="page-post">
+
+  {% assign posts = site.posts | where: 'categories', page.title %}
+  {% for post in posts %}
+    <a class ="page-post-item" href="{{ post.url }}">
+      <img class = "page-post-item-img" src="{{ post.icon-img }}">
+      <div class="page-post-item-text">
+        <p>{{ post.title }}</p>
+      </div>
+    </a>
+  {% endfor %}
+
+</div>
+
+
